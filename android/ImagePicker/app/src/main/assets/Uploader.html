@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=visualization"></script>
+		<title>FLood Alert Application</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="script.js"></script>
+		<style>
+		#UPLOAD {
+		  border: solid black;
+		}
+		</style>
+	</head>
+	<body>
+		<img class="logo" src="icon.jpg" alt="My_Logo" style="width: 40%;">
+		<br><br>
+		<!--
+		<label for="url" style="font-size:20px" >Enter the Server url:</label>
+		<input type="url" name ="url" id="url" style="width:70%;" [(ngModel)]="url"><br><br><br>
+		-->
+		<div id="UPLOAD">
+			<p style="font-size:20px">Upload File</p>
+			<label for="url" style="font-size:20px" >Enter Image Location</label>
+			<input type="loc" name ="loc" id="loc" style="width:70%;" [(ngModel)]="loc"><br><br><br>
+			<form id="upload_form" enctype="multipart/form-data" method="post"></form>
+			<input type="file" name="file1" id="file1" onchange="uploadFile()">
+			<progress id="progressBar" value="0" max="100" style="width:50%;"></progress>
+			<h3 id="status"></h3>
+			<p id="loaded_n_total"></p>
+			<div id="myDiv" style="width: 100%; height: 20%;">RESULT</div>
+		</div>
+		<br><br>
+	    <a class="nav-item">
+	        <input type="urlOfFile" name ="urlOfFile" id="urlOfFile" style="width:70%;"><br><br><br>
+	       	<a class="nav-link js-scroll-trigger" style="font-size:15px" href="#" onclick="placeMarker()">See Map </a>
+	       	&nbsp;&nbsp;&nbsp;
+	        <a class="nav-link js-scroll-trigger" style="font-size:15px" href="#" onclick="heatmap()">See Heatmap</a>
+	    </a>
+		<p id="return"></p>
+		</form>
+		<div id="FloodCenter" style="width: 100%; height: 20%; font-size:15px";></div>
+		<div class="container" id="dvMap" style="width: 130%; height: 750px"></div>
+	</body>
+</html>

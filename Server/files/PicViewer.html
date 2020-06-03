@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Image Viewer</title>
+    <style>
+       .flex-container 
+       {
+          display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+          background-color: bisque;
+        }
+
+        .flex-container > div 
+        {
+          background-color: #f1f1f1;
+          margin: 10px;
+          padding: 20px;
+          font-size: 16px;
+        }
+
+    </style>
+    <button type="button" onClick="refreshPage()">Refresh</button><br>
+    <!--  <label class="control-label" style="margin-left: 20px" id="demo"></label>-->
+
+    <script>
+      function refreshPage()
+      {
+        window.location.reload();
+      } 
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+     <div id="img_viewer" class="flex-container"></div>
+
+    <script>
+      for(let i=1;i<10;i++)    
+        var test_img=[];
+      var response = decodeURIComponent(window.location.search);
+      response=response.replace(" ","%20");
+      response=response.replace("?","");
+      response=response.split("@");
+      for(let i=0;i<response.length;i++)    
+      {
+        $('#img_viewer').append
+        (
+            '<div><p id="demo'+i+'"></p><img id="test_img'+i+'" src="" style="width: 300px; height: 300px; class="img" controls autoplay>  </img></div>'
+        );//src does not have significance here
+      }
+    </script>    
+
+    <script>
+       for(let i=0;i<response.length;i++)    
+        {
+          url=response[i].substring(6,response[i].length); // since files contains 5 letters
+          test_img[i]=document.getElementById('test_img'+i);
+          test_img[i].src = url;
+        }
+        
+    </script>
+
+    <div id="logs"></div>
+  </body>
+</html>

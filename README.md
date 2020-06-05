@@ -1,6 +1,6 @@
 # Flood-Alert-Application
 
-Some visualizations and screenshots pertaining to the flood alertapplication. 
+Some visualizations and screenshots pertaining to the flood alert application. 
 
 ## Working
 ![Working](https://github.com/r-Iyer/Flood-Alert-Application/blob/master/Screenshots/capture_spawn.png)

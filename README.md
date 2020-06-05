@@ -3,16 +3,16 @@
 Some visualizations and screenshots pertaining to the flood alertapplication. 
 
 ## Working
-(https://github.com/r-Iyer/Flood-Alert-Application/blob/master/Screenshots/capture_spawn.png)
+![Working](https://github.com/r-Iyer/Flood-Alert-Application/blob/master/Screenshots/capture_spawn.png)
 
 ## Application
-(https://github.com/r-Iyer/Flood-Alert-Application/blob/master/Screenshots/Capture%201.PNG)
+![Application](https://github.com/r-Iyer/Flood-Alert-Application/blob/master/Screenshots/Capture%201.PNG)
 
 ## Images on cLick
-(https://github.com/r-Iyer/Flood-Alert-Application/blob/master/Screenshots/Capture_infobox.PNG)
+![Images on click](https://github.com/r-Iyer/Flood-Alert-Application/blob/master/Screenshots/Capture_infobox.PNG)
 
 ## Web Scraping
-(https://github.com/r-Iyer/Flood-Alert-Application/blob/master/Screenshots/Capture%202.PNG)
+![Web Scraping](https://github.com/r-Iyer/Flood-Alert-Application/blob/master/Screenshots/Capture%202.PNG)
 
 ## Clusters
 ### Chennai Clusters

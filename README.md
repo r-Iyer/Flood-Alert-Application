@@ -1,5 +1,5 @@
-run node NodeServer
-Open Uploader.html
+# run node NodeServer
+# open Uploader.html
 
 # Flood-Alert-Application
 

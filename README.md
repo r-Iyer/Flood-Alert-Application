@@ -1,3 +1,6 @@
+run node NodeServer
+Open Uploader.html
+
 # Flood-Alert-Application
 
 Some visualizations and screenshots pertaining to the flood alert application. 

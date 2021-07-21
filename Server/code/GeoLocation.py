@@ -27,7 +27,7 @@ def main(argv):
 	import matplotlib.pyplot as plt
 	from sklearn.cluster import KMeans, DBSCAN
 	from scipy.cluster.vq import kmeans2, whiten
-	key="YOU API KEY"
+	key="AIzaSyAu6PIjwW-IL4vznXvmi5KnAYlvBQWZSoA"
 	class ImageMetaData(object):
 	    exif_data = None
 	    image = None
@@ -64,17 +64,9 @@ def main(argv):
 	    def convert_to_degress(self, value):
 	        """Helper function to convert the GPS coordinates 
 	        stored in the EXIF to degress in float format"""
-	        d0 = value[0][0]
-	        d1 = value[0][1]
-	        d = float(d0) / float(d1)
-
-	        m0 = value[1][0]
-	        m1 = value[1][1]
-	        m = float(m0) / float(m1)
-
-	        s0 = value[2][0]
-	        s1 = value[2][1]
-	        s = float(s0) / float(s1)
+	        d = value[0]
+	        m = value[1]
+	        s = value[2]
 
 	        return d + (m / 60.0) + (s / 3600.0)
 
@@ -130,7 +122,7 @@ def main(argv):
 	for i in range(len(y)): # to prevent first cluser label = -1
 	    y[i]=y[i]+1;
 
-	kmeans = KMeans(n_clusters=max(db.labels_)+1).fit((np.radians(coordinates))) 
+	kmeans = KMeans(n_clusters=max(db.labels_)).fit((np.radians(coordinates))) 
 	y=kmeans.labels_
 
 	center=kmeans.cluster_centers_
@@ -197,16 +189,16 @@ def main(argv):
 
 	xcor=[]
 	ycor=[]
-	for i in range(max(db.labels_)+1):
+	for i in range(max(db.labels_)):
 	    xcor.append([])
 	    ycor.append([])
-	for i in range(max(db.labels_)+1):
+	for i in range(max(db.labels_)):
 	    for j in range(len(coordinates)):
 	        if y[j]==i:
 	            xcor[i].append(coordinates[j][0])
 	            ycor[i].append(coordinates[j][1])
 	poly=[]
-	for i in range(max(db.labels_)+1):
+	for i in range(max(db.labels_)):
 	    val=encircle(xcor[i], ycor[i])
 	    if(len(val)>0):
 	        poly.append(np.concatenate(val).ravel())

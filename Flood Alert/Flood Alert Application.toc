@@ -1,0 +1,30 @@
+\contentsline {section}{\numberline {1}Introduction}{5}%
+\contentsline {subsection}{\numberline {1.1}Motivation}{5}%
+\contentsline {subsection}{\numberline {1.2}Proposed method}{5}%
+\contentsline {subsubsection}{\numberline {1.2.1}Authentication}{6}%
+\contentsline {subsubsection}{\numberline {1.2.2}Analytics}{7}%
+\contentsline {subsubsection}{\numberline {1.2.3}Mapping peripheries}{7}%
+\contentsline {subsubsection}{\numberline {1.2.4}Usefulness}{8}%
+\contentsline {section}{\numberline {2}System design}{8}%
+\contentsline {subsection}{\numberline {2.1}Framework}{8}%
+\contentsline {subsection}{\numberline {2.2}Multiple requests}{9}%
+\contentsline {section}{\numberline {3}Implementation}{9}%
+\contentsline {subsection}{\numberline {3.1}Frontend}{9}%
+\contentsline {subsection}{\numberline {3.2}Backend}{10}%
+\contentsline {subsection}{\numberline {3.3}Deep learning approach}{11}%
+\contentsline {subsubsection}{\numberline {3.3.1}Training dataset}{11}%
+\contentsline {subsubsection}{\numberline {3.3.2}Flood-water-detector model}{11}%
+\contentsline {subsubsection}{\numberline {3.3.3}Response matrix generation (heatmap) and flood region identification}{18}%
+\contentsline {section}{\numberline {4}Simulation}{20}%
+\contentsline {subsection}{\numberline {4.1}Web scraping}{20}%
+\contentsline {subsection}{\numberline {4.2}Assigning coordinates to scrapped images}{21}%
+\contentsline {section}{\numberline {5}Working with the simulated scenario}{22}%
+\contentsline {subsection}{\numberline {5.1}Extraction of geo location from the metadata of an image}{22}%
+\contentsline {subsection}{\numberline {5.2}Clustering}{23}%
+\contentsline {subsection}{\numberline {5.3}Generating heatmap}{24}%
+\contentsline {subsection}{\numberline {5.4}Identifying affected localities}{25}%
+\contentsline {subsection}{\numberline {5.5}Generating boundaries to identify “hotspots”}{25}%
+\contentsline {section}{\numberline {6}Results}{27}%
+\contentsline {section}{\numberline {7}Future scope}{27}%
+\contentsline {section}{\numberline {8}Challenges}{28}%
+\contentsline {section}{References}{28}%

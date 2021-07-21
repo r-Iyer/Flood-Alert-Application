@@ -1,0 +1,867 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.3.25)  19 JUN 2020 14:36
+entering extended mode
+**"./Flood Alert Application.tex"
+("Flood Alert Application.tex"
+LaTeX2e <2019-10-01> patch level 3
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
+Document Class: article 2019/10/25 v1.4k Standard LaTeX document class
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size12.clo"
+File: size12.clo 2019/10/25 v1.4k Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.s
+ty"
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.sty
+"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifvtex.sty"
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\iftex.sty"
+Package: iftex 2019/11/07 v1.0c TeX engine tests
+))
+\Gm@cnth=\count88
+\Gm@cntv=\count89
+\c@Gm@tempcnt=\count90
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.c
+fg"))
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.s
+ty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks16
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.s
+ty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.s
+ty"
+Package: graphics 2019/11/01 v1.3d Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graphi
+cs.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdftex
+.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen111
+\Gin@req@width=\dimen112
+)
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/apacite\apacite.sty
+"
+Package: apacite 2013/07/21 v6.03 APA citation
+\c@BibCnt=\count91
+\bibleftmargin=\skip43
+\bibindent=\skip44
+\bibparsep=\skip45
+\bibitemsep=\skip46
+\biblabelsep=\skip47
+)
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\enumerate.sty
+"
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks17
+)
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\multicol.sty"
+Package: multicol 2019/03/01 v1.8w multicolumn formatting (FMi)
+\c@tracingmulticols=\count92
+\mult@box=\box27
+\multicol@leftmargin=\dimen113
+\c@unbalance=\count93
+\c@collectmore=\count94
+\doublecol@number=\count95
+\multicoltolerance=\count96
+\multicolpretolerance=\count97
+\full@width=\dimen114
+\page@free=\dimen115
+\premulticols=\dimen116
+\postmulticols=\dimen117
+\multicolsep=\skip48
+\multicolbaselineskip=\skip49
+\partial@page=\box28
+\last@line=\box29
+\maxbalancingoverflow=\dimen118
+\mult@rightbox=\box30
+\mult@grightbox=\box31
+\mult@gfirstbox=\box32
+\mult@firstbox=\box33
+\@tempa=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\c@minrows=\count98
+\c@columnbadness=\count99
+\c@finalcolumnbadness=\count100
+\last@try=\dimen119
+\multicolovershoot=\dimen120
+\multicolundershoot=\dimen121
+\mult@nat@firstbox=\box51
+\colbreak@box=\box52
+\mc@col@check@num=\count101
+)
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty
+"
+Package: amsmath 2019/11/16 v2.17d AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.sty
+"
+Package: amstext 2000/06/29 v2.01 AMS text
+ ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty
+"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen122
+))
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen123
+) ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.st
+y"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count102
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count103
+\leftroot@=\count104
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count105
+\DOTSCASE@=\count106
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+\big@size=\dimen124
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count107
+\c@MaxMatrixCols=\count108
+\dotsspace@=\muskip10
+\c@parentequation=\count109
+\dspbrk@lvl=\count110
+\tag@help=\toks19
+\row@=\count111
+\column@=\count112
+\maxfields@=\count113
+\andhelp@=\toks20
+\eqnshift@=\dimen125
+\alignsep@=\dimen126
+\tagshift@=\dimen127
+\tagwidth@=\dimen128
+\totwidth@=\dimen129
+\lineht@=\dimen130
+\@envbody=\toks21
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2858.
+LaTeX Info: Redefining \] on input line 2859.
+)
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\subcaption.
+sty"
+Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption.sty
+"
+Package: caption 2020/01/03 v3.4h Customizing captions (AR)
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption3.st
+y"
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen131
+\captionmargin@=\dimen132
+\captionwidth=\dimen133
+\caption@tempdima=\dimen134
+\caption@indent=\dimen135
+\caption@parindent=\dimen136
+\caption@hangindent=\dimen137
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count114
+\c@continuedfloat=\count115
+)
+\c@subfigure=\count116
+\c@subtable=\count117
+)
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.s
+ty"
+\lst@mode=\count118
+\lst@gtempboxa=\box55
+\lst@token=\toks23
+\lst@length=\count119
+\lst@currlwidth=\dimen138
+\lst@column=\count120
+\lst@pos=\count121
+\lst@lostspace=\dimen139
+\lst@width=\dimen140
+\lst@newlines=\count122
+\lst@lineno=\count123
+\lst@maxwidth=\dimen141
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.st
+y"
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count124
+\lst@skipnumbers=\count125
+\lst@framebox=\box56
+)
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.c
+fg"
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/algorithmicx\algpse
+udocode.sty"
+Package: algpseudocode 
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/algorithmicx\algori
+thmicx.sty"
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count126
+\c@ALG@rem=\count127
+\c@ALG@nested=\count128
+\ALG@tlm=\skip53
+\ALG@thistlm=\skip54
+\c@ALG@Lnr=\count129
+\c@ALG@blocknr=\count130
+\c@ALG@storecount=\count131
+\c@ALG@tmpcounter=\count132
+\ALG@tmplength=\skip55
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+)
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/algorithms\algorith
+m.sty"
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count133
+\float@exts=\toks24
+\float@box=\box57
+\@float@everytoks=\toks25
+\@floatcapt=\box58
+)
+\@float@every@algorithm=\toks26
+\c@algorithm=\count134
+)
+("Flood Alert Application.aux")
+\openout1 = `"Flood Alert Application.aux"'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pd
+f.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count135
+\scratchdimen=\dimen142
+\scratchbox=\box59
+\nofMPsegments=\count136
+\nofMParguments=\count137
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count138
+\MPscratchDim=\dimen143
+\MPnumerator=\count139
+\makeMPintoPDFobject=\count140
+\everyMPtoPDFconversion=\toks28
+)
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstop
+df-base.sty"
+Package: epstopdf-base 2019/11/27 v2.8 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+)
+\c@maskedRefs=\count141
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/apacite\english.apc
+"
+File: english.apc 2013/07/21 v6.03 apacite language file
+LaTeX Info: Redefining \BPBI on input line 129.
+LaTeX Info: Redefining \BHBI on input line 130.
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count142
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <32> not available
+(Font)              size <24.88> substituted on input line 15.
+
+[1
+
+{C:/Users/user/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <32> not available
+(Font)              size <24.88> substituted on input line 33.
+
+[2] ("Flood Alert Application.toc"
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
+\tf@toc=\write3
+\openout3 = `"Flood Alert Application.toc"'.
+
+[3] ("Flood Alert Application.lof")
+\tf@lof=\write4
+\openout4 = `"Flood Alert Application.lof"'.
+
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 41--45
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--45
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--49
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--53
+
+ []
+
+[5]
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 5
+4.
+ ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 54.
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--62
+
+ []
+
+<Capture_upload.png, id=21, 821.469pt x 486.618pt>
+File: Capture_upload.png Graphic file (type png)
+<use Capture_upload.png>
+Package pdftex.def Info: Capture_upload.png  used on input line 71.
+(pdftex.def)             Requested size: 289.07999pt x 171.247pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--75
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--75
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--75
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--75
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 79--82
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--86
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--86
+
+ []
+
+[7 <./Capture_upload.png>]
+<System Design.jpg, id=31, 782.925pt x 392.46625pt>
+File: System Design.jpg Graphic file (type jpg)
+<use System Design.jpg>
+Package pdftex.def Info: System Design.jpg  used on input line 90.
+(pdftex.def)             Requested size: 289.07999pt x 144.9108pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--113
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--113
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--113
+
+ []
+
+[8 <./System Design.jpg>]
+<capture_spawn.jpg, id=35, 553.06625pt x 392.46625pt>
+File: capture_spawn.jpg Graphic file (type jpg)
+<use capture_spawn.jpg>
+Package pdftex.def Info: capture_spawn.jpg  used on input line 116.
+(pdftex.def)             Requested size: 289.07999pt x 205.1316pt.
+<Capture 1.png, id=36, 817.25325pt x 448.67625pt>
+File: Capture 1.png Graphic file (type png)
+<use Capture 1.png>
+Package pdftex.def Info: Capture 1.png  used on input line 127.
+(pdftex.def)             Requested size: 289.07999pt x 158.70267pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[9 <./capture_spawn.jpg>] [10 <./Capture 1.png>]
+<training_data.jpg, id=44, 552.26324pt x 277.63725pt>
+File: training_data.jpg Graphic file (type jpg)
+<use training_data.jpg>
+Package pdftex.def Info: training_data.jpg  used on input line 170.
+(pdftex.def)             Requested size: 289.07999pt x 145.32962pt.
+ [11 <./training_data.jpg>]
+<pasted image 0.png, id=48, 765.86125pt x 773.89125pt>
+File: pasted image 0.png Graphic file (type png)
+<use pasted image 0.png>
+Package pdftex.def Info: pasted image 0.png  used on input line 186.
+(pdftex.def)             Requested size: 216.81pt x 219.07341pt.
+<flowchart.pdf, id=49, page=1, 551.1792pt x 334.3692pt>
+File: flowchart.pdf Graphic file (type pdf)
+<use flowchart.pdf, page 1>
+Package pdftex.def Info: flowchart.pdf , page1 used on input line 194.
+(pdftex.def)             Requested size: 469.75502pt x 284.98047pt.
+
+Overfull \hbox (2348.7751pt too wide) in paragraph at lines 194--195
+[][]|  
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[12 <./pasted image 0.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 226--231
+
+ []
+
+[13 <./flowchart.pdf
+
+pdfTeX warning: pdflatex (file ./flowchart.pdf): PDF inclusion: invalid other r
+esource which is no dict (key 'ProcSets', type <array>); ignored.
+>]
+<pasted image 0 (2).png, id=75, 906.38625pt x 616.3025pt>
+File: pasted image 0 (2).png Graphic file (type png)
+<use pasted image 0 (2).png>
+Package pdftex.def Info: pasted image 0 (2).png  used on input line 246.
+(pdftex.def)             Requested size: 216.81pt x 147.4172pt.
+ [14 <./pasted image 0 (2).png>]
+Underfull \hbox (badness 10000) in paragraph at lines 285--288
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 288--310
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 288--310
+
+ []
+
+[15]
+<pasted image 0 (3).png, id=82, 295.1025pt x 455.7025pt>
+File: pasted image 0 (3).png Graphic file (type png)
+<use pasted image 0 (3).png>
+Package pdftex.def Info: pasted image 0 (3).png  used on input line 313.
+(pdftex.def)             Requested size: 144.54pt x 223.20576pt.
+<pasted image 0 (10).png, id=83, 302.12875pt x 431.6125pt>
+File: pasted image 0 (10).png Graphic file (type png)
+<use pasted image 0 (10).png>
+Package pdftex.def Info: pasted image 0 (10).png  used on input line 314.
+(pdftex.def)             Requested size: 144.5407pt x 227.13998pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 310--321
+
+ []
+
+[16 <./pasted image 0 (3).png> <./pasted image 0 (10).png>]
+Underfull \hbox (badness 10000) in paragraph at lines 322--343
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 322--343
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 343--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 343--367
+
+ []
+
+[17
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 382--383
+
+ []
+
+
+Overfull \hbox (37.82158pt too wide) detected at line 383
+\OML/cmm/m/it/12 mask\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 y \OT1/cmr/m/n/12 : \OML
+/cmm/m/it/12 y \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 winW; x \OT1/cmr/m/n/12 : \OM
+L/cmm/m/it/12 x \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 winH\OT1/cmr/m/n/12 ] = \OML
+/cmm/m/it/12 mask\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 y \OT1/cmr/m/n/12 : \OML/cmm
+/m/it/12 y \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 winW; x \OT1/cmr/m/n/12 : \OML/cm
+m/m/it/12 x \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 winH\OT1/cmr/m/n/12 ] + \OML/cmm
+/m/it/12 np:full\OT1/cmr/m/n/12 ((48\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 48)\OML/
+cmm/m/it/12 ; y[]pred\OT1/cmr/m/n/12 )
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 383--386
+
+ []
+
+<pasted image 0 (4).png, id=90, 803.0pt x 536.0025pt>
+File: pasted image 0 (4).png Graphic file (type png)
+<use pasted image 0 (4).png>
+Package pdftex.def Info: pasted image 0 (4).png  used on input line 409.
+(pdftex.def)             Requested size: 144.54pt x 96.47629pt.
+<pasted image 0 (5).png, id=91, 803.0pt x 536.0025pt>
+File: pasted image 0 (5).png Graphic file (type png)
+<use pasted image 0 (5).png>
+Package pdftex.def Info: pasted image 0 (5).png  used on input line 415.
+(pdftex.def)             Requested size: 144.54pt x 96.47629pt.
+<pasted image 0 (6).png, id=92, 474.77374pt x 674.52pt>
+File: pasted image 0 (6).png Graphic file (type png)
+<use pasted image 0 (6).png>
+Package pdftex.def Info: pasted image 0 (6).png  used on input line 421.
+(pdftex.def)             Requested size: 144.54135pt x 108.39885pt.
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 407--425
+[]$[]$ $[]$
+ []
+
+<pasted image 0 (7).png, id=93, 1284.8pt x 722.7pt>
+File: pasted image 0 (7).png Graphic file (type png)
+<use pasted image 0 (7).png>
+Package pdftex.def Info: pasted image 0 (7).png  used on input line 431.
+(pdftex.def)             Requested size: 144.54pt x 81.29472pt.
+<pasted image 0 (8).png, id=94, 1284.8pt x 722.7pt>
+File: pasted image 0 (8).png Graphic file (type png)
+<use pasted image 0 (8).png>
+Package pdftex.def Info: pasted image 0 (8).png  used on input line 437.
+(pdftex.def)             Requested size: 144.54pt x 81.29472pt.
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 429--441
+[]$[]$ $[]$ 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 444--447
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 444--447
+
+ []
+
+[19 <./pasted image 0 (4).png> <./pasted image 0 (5).png> <./pasted image 0 (6)
+.png> <./pasted image 0 (7).png> <./pasted image 0 (8).png>]
+Underfull \hbox (badness 10000) in paragraph at lines 453--456
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 460--461
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 462--467
+
+ []
+
+<Capture 2.png, id=105, 1156.32pt x 617.9085pt>
+File: Capture 2.png Graphic file (type png)
+<use Capture 2.png>
+Package pdftex.def Info: Capture 2.png  used on input line 476.
+(pdftex.def)             Requested size: 289.07999pt x 154.47675pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 482--484
+
+ []
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 493--501
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--501
+
+ []
+
+
+Overfull \hbox (51.94408pt too wide) in paragraph at lines 502--503
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[21 <./Capture 2.png>]
+Overfull \hbox (58.99406pt too wide) in paragraph at lines 511--512
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+<Capture_infobox.png, id=113, 678.1335pt x 528.7755pt>
+File: Capture_infobox.png Graphic file (type png)
+<use Capture_infobox.png>
+Package pdftex.def Info: Capture_infobox.png  used on input line 534.
+(pdftex.def)             Requested size: 289.07999pt x 225.4084pt.
+<pasted image 0 (9).png, id=114, 614.295pt x 277.035pt>
+File: pasted image 0 (9).png Graphic file (type png)
+<use pasted image 0 (9).png>
+Package pdftex.def Info: pasted image 0 (9).png  used on input line 545.
+(pdftex.def)             Requested size: 289.07999pt x 130.37132pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 540--550
+
+ []
+
+[22 <./Capture_infobox.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 551--554
+
+ []
+
+<Capture_chennai_cluster.png, id=119, 1063.5735pt x 563.10374pt>
+File: Capture_chennai_cluster.png Graphic file (type png)
+<use Capture_chennai_cluster.png>
+Package pdftex.def Info: Capture_chennai_cluster.png  used on input line 566.
+(pdftex.def)             Requested size: 289.07999pt x 153.04533pt.
+[23 <./pasted image 0 (9).png>]
+<Capture_chennai_heatmap_less_boundary.png, id=123, 1096.69725pt x 565.51276pt>
+
+File: Capture_chennai_heatmap_less_boundary.png Graphic file (type png)
+<use Capture_chennai_heatmap_less_boundary.png>
+Package pdftex.def Info: Capture_chennai_heatmap_less_boundary.png  used on inp
+ut line 576.
+(pdftex.def)             Requested size: 289.07999pt x 149.05766pt.
+<Capture_kolkata_areas_affected.png, id=124, 741.36975pt x 104.7915pt>
+File: Capture_kolkata_areas_affected.png Graphic file (type png)
+<use Capture_kolkata_areas_affected.png>
+Package pdftex.def Info: Capture_kolkata_areas_affected.png  used on input line
+ 588.
+(pdftex.def)             Requested size: 289.07999pt x 40.86212pt.
+ [24 <./Capture_chennai_cluster.png> <./Capture_chennai_heatmap_less_boundary.p
+ng>]
+Underfull \hbox (badness 10000) in paragraph at lines 593--600
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 593--600
+
+ []
+
+<Capture_graham_scan.png, id=130, 781.92125pt x 554.07pt>
+File: Capture_graham_scan.png Graphic file (type png)
+<use Capture_graham_scan.png>
+Package pdftex.def Info: Capture_graham_scan.png  used on input line 628.
+(pdftex.def)             Requested size: 289.07999pt x 204.84206pt.
+<Capture_mumbai_heatmap.png, id=131, 1065.9825pt x 558.888pt>
+File: Capture_mumbai_heatmap.png Graphic file (type png)
+<use Capture_mumbai_heatmap.png>
+Package pdftex.def Info: Capture_mumbai_heatmap.png  used on input line 634.
+(pdftex.def)             Requested size: 289.07999pt x 151.55843pt.
+[25 <./Capture_kolkata_areas_affected.png>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[26 <./Capture_graham_scan.png>] [27 <./Capture_mumbai_heatmap.png>]
+("Flood Alert Application.bbl")
+Overfull \hbox (22.1732pt too wide) in paragraph at lines 666--677
+\OT1/cmr/m/n/12 https://towardsdatascience.com/a-comprehensive-hands-on-guide-t
+o-transfer-learning-with-real-
+ []
+
+
+Overfull \hbox (34.11891pt too wide) in paragraph at lines 666--677
+\OT1/cmr/m/n/12 https://medium.com/kansas-city-machine-learning-artificial-inte
+lligen/an-introduction-to-transfer-
+ []
+
+
+Overfull \hbox (22.1732pt too wide) in paragraph at lines 666--677
+\OT1/cmr/m/n/12 https://towardsdatascience.com/a-comprehensive-hands-on-guide-t
+o-transfer-learning-with-real-
+ []
+
+
+Overfull \hbox (34.11891pt too wide) in paragraph at lines 666--677
+\OT1/cmr/m/n/12 https://medium.com/kansas-city-machine-learning-artificial-inte
+lligen/an-introduction-to-transfer-
+ []
+
+[28] ("Flood Alert Application.aux")
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 7.12pt have occurred.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 6417 strings out of 492484
+ 94030 string characters out of 3122054
+ 178894 words of memory out of 3000000
+ 10671 multiletter control sequences out of 15000+200000
+ 11355 words of font info for 42 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 48i,9n,46p,683b,985s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmbx12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmex10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/user/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/user/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/user/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/User
+s/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.p
+fb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmti12.pfb>
+Output written on "Flood Alert Application.pdf" (28 pages, 9075447 bytes).
+PDF statistics:
+ 177 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 116 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,29 @@
+\contentsline {section}{\numberline {I}Introduction}{2}%
+\contentsline {subsection}{\numberline {\mbox {I-A}}Motivation}{2}%
+\contentsline {subsection}{\numberline {\mbox {I-B}}Proposed method}{2}%
+\contentsline {subsubsection}{\numberline {\mbox {I-B}1}Authentication}{3}%
+\contentsline {subsubsection}{\numberline {\mbox {I-B}2}Analytics}{3}%
+\contentsline {subsubsection}{\numberline {\mbox {I-B}3}Mapping peripheries}{3}%
+\contentsline {subsubsection}{\numberline {\mbox {I-B}4}Usefulness}{4}%
+\contentsline {section}{\numberline {II}System design}{4}%
+\contentsline {subsection}{\numberline {\mbox {II-A}}Framework}{4}%
+\contentsline {subsection}{\numberline {\mbox {II-B}}Multiple requests}{4}%
+\contentsline {section}{\numberline {III}Implementation}{5}%
+\contentsline {subsection}{\numberline {\mbox {III-A}}Frontend}{5}%
+\contentsline {subsection}{\numberline {\mbox {III-B}}Backend}{5}%
+\contentsline {subsection}{\numberline {\mbox {III-C}}Deep learning approach}{5}%
+\contentsline {subsubsection}{\numberline {\mbox {III-C}1}Training dataset}{5}%
+\contentsline {subsubsection}{\numberline {\mbox {III-C}2}Flood-water-detector model}{5}%
+\contentsline {subsubsection}{\numberline {\mbox {III-C}3}Response matrix generation (heatmap) and flood region identification}{9}%
+\contentsline {section}{\numberline {IV}Simulation}{10}%
+\contentsline {subsection}{\numberline {\mbox {IV-A}}Web scraping}{10}%
+\contentsline {subsection}{\numberline {\mbox {IV-B}}Assigning coordinates to scrapped images}{11}%
+\contentsline {section}{\numberline {V}Working with the simulated scenario}{11}%
+\contentsline {subsection}{\numberline {\mbox {V-A}}Extraction of geo location from the metadata of an image}{11}%
+\contentsline {subsection}{\numberline {\mbox {V-B}}Clustering}{12}%
+\contentsline {subsection}{\numberline {\mbox {V-C}}Generating heatmap}{12}%
+\contentsline {subsection}{\numberline {\mbox {V-D}}Identifying affected localities}{12}%
+\contentsline {subsection}{\numberline {\mbox {V-E}}Generating boundaries to identify “hotspots”}{13}%
+\contentsline {section}{\numberline {VI}Results}{14}%
+\contentsline {section}{\numberline {VII}Future scope}{14}%
+\contentsline {section}{\numberline {VIII}Challenges}{14}%

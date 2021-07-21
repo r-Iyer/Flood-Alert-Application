@@ -1,0 +1,127 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Chaudhary%
+, D’Aronco%
+, de Vitry%
+, Leit{\~a}o%
+\BCBL {}\ \BBA {} Wegner%
+}{%
+Chaudhary%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2019}}%
+}]{%
+Chaudhary2019FLOODWATERLE}
+\APACinsertmetastar {%
+Chaudhary2019FLOODWATERLE}%
+\begin{APACrefauthors}%
+Chaudhary, P.%
+, D’Aronco, S.%
+, de Vitry, M\BPBI M.%
+, Leit{\~a}o, J\BPBI P.%
+\BCBL {}\ \BBA {} Wegner, J\BPBI D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {FLOOD-WATER LEVEL ESTIMATION FROM SOCIAL MEDIA IMAGES}
+  {Flood-water level estimation from social media images}.{\BBCQ}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Jyh-Horng%
+, Chien-Hao%
+, Lun-Chi%
+, Lo%
+\BCBL {}\ \BBA {} Lin%
+}{%
+Jyh-Horng%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+inproceedings}
+\APACinsertmetastar {%
+inproceedings}%
+\begin{APACrefauthors}%
+Jyh-Horng, W.%
+, Chien-Hao, T.%
+, Lun-Chi, C.%
+, Lo, S\BHBI W.%
+\BCBL {}\ \BBA {} Lin, F\BHBI P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{01}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Automated Image Identification Method for Flood Disaster
+  Monitoring In Riverine Environments: a Case Study in Taiwan} {Automated image
+  identification method for flood disaster monitoring in riverine environments:
+  a case study in taiwan}.{\BBCQ}.
+\newblock
+\begin{APACrefDOI} \doi{10.2991/iea-15.2015.65} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+{Layek}%
+, {Poddar}%
+\BCBL {}\ \BBA {} {Mandal}%
+}{%
+{Layek}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2019}}%
+}]{%
+8882877}
+\APACinsertmetastar {%
+8882877}%
+\begin{APACrefauthors}%
+{Layek}, A\BPBI K.%
+, {Poddar}, S.%
+\BCBL {}\ \BBA {} {Mandal}, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Detection of Flood Images Posted on Online Social Media
+  for Disaster Response} {Detection of flood images posted on online social
+  media for disaster response}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {2019 Second International Conference on Advanced
+  Computational and Communication Paradigms (ICACCP)} {2019 second
+  international conference on advanced computational and communication
+  paradigms (icaccp)}\ (\BPG~1-6).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+{Napiah}%
+, {Idris}%
+, {Ahmedy}%
+\BCBL {}\ \BBA {} {Ngadi}%
+}{%
+{Napiah}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+8075343}
+\APACinsertmetastar {%
+8075343}%
+\begin{APACrefauthors}%
+{Napiah}, M\BPBI N.%
+, {Idris}, M\BPBI Y\BPBI I.%
+, {Ahmedy}, I.%
+\BCBL {}\ \BBA {} {Ngadi}, M\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Flood alerts system with android application} {Flood
+  alerts system with android application}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {2017 6th ICT International Student Project Conference
+  (ICT-ISPC)} {2017 6th ict international student project conference
+  (ict-ispc)}\ (\BPG~1-4).
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

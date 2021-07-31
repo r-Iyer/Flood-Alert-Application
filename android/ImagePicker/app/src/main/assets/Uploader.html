@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADmmvi5mba6G8xiofeU-mGxhplfd-Sn-4&libraries=places"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADmmvi5mba6G8xiofeU-mGxhplfd-Sn-4&libraries=visualization"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQCOr2z_gBhaKfuniDbEJI9DNleVDFbdk&libraries=visualization,places,geometry"></script>
 		<title>FLood Alert Application</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<script type="text/javascript" src="script.js"></script>
@@ -36,6 +35,10 @@
 	       	<a class="nav-link js-scroll-trigger" style="font-size:15px" href="#" onclick="placeMarker()">See Map </a>
 	       	&nbsp;&nbsp;&nbsp;
 	        <a class="nav-link js-scroll-trigger" style="font-size:15px" href="#" onclick="heatmap()">See Heatmap</a>
+	    </a>
+	    <a class="nav-item">
+	        <button class="hide" id="route-selection" style="font-size: 17px; margin-left: 300px">Click to end the route selection</button>
+			<p class="hide" id="response"></p>
 	    </a>
 		<p id="return"></p>
 		</form>

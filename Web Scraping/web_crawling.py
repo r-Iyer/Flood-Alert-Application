@@ -62,7 +62,7 @@ results_start = 0
 for img in thumbnail_results[results_start:number_results]:
     try:
         img.click() #click on a thumbnail
-        time.sleep(3)   # can be modified
+        time.sleep(5)   # can be modified
     except Exception:
         continue
 
@@ -86,7 +86,7 @@ for img in thumbnail_results[results_start:number_results]:
         try:
             req = urllib2.Request(actual_image.get_attribute('src'), headers={'User-Agent': header})
             raw_img = urllib2.urlopen(req).read()
-            File = open(os.path.join(searchterm , searchterm + "_" + str(succounter) + "." + "jpg"), "wb")
+            File = open(os.path.join(searchterm , searchterm.replace(" ","_") + "_" + str(succounter) + "." + "jpg"), "wb")
             File.write(raw_img)
             File.close()
             succounter = succounter + 1

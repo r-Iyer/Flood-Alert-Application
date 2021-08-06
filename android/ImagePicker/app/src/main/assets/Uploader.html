@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQCOr2z_gBhaKfuniDbEJI9DNleVDFbdk&libraries=visualization,places,geometry"></script>
+		<script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
 		<title>FLood Alert Application</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<script type="text/javascript" src="script.js"></script>
@@ -38,7 +39,7 @@
 	    </a>
 	    <a class="nav-item">
 	        <button class="hide" id="route-selection" style="font-size: 17px; margin-left: 300px">Click to end the route selection</button>
-			<p class="hide" id="response"></p>
+			<p class="hide" id="cost"></p>
 	    </a>
 		<p id="return"></p>
 		</form>

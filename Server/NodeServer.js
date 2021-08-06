@@ -45,8 +45,9 @@ app.post('/submit', (req, res) =>
       const path = require('path');
       const {spawn} = require('child_process');
       function runScript()
-      {console.log("files/"+fields['loc']+"/"+file["file1"]["name"]);
-        return spawn('python',["./code/predict.py", "files/"+fields['loc']+"/"+file["file1"]["name"]]);
+      {
+		  console.log("files/"+fields['loc']+"/"+file["file1"]["name"]);
+		  return spawn('python',["./code/predict.py", "files/"+fields['loc']+"/"+file["file1"]["name"]]);
       }
 	  
       const subprocess = runScript()
@@ -128,21 +129,19 @@ app.post('/GetRoute', (req, res) =>
 				var waypts=[]
 				var parseRequest = JSON.parse(clientData);
 				var base_url="https://maps.googleapis.com/maps/api/directions/json?";
-				var paramString = "origin="+parseRequest[0]["latitude"] + "," + parseRequest[0]["longitude"]+"&destination="+parseRequest[1]["latitude"] + "," + parseRequest[1]["longitude"];
+				var paramString = "origin="+parseRequest[0]["latitude"] + "," + parseRequest[0]["longitude"]+"&destination="+parseRequest[parseRequest.length-1]["latitude"] + "," + parseRequest[parseRequest.length-1]["longitude"];
 				var url=base_url;
 				url += paramString;
 				//url=url+"&key="+api_key;
 				url=url+"&key="+api_key;
 				var axios = require('axios');
-				console.log(url);
 				await axios.get(url).then(async (data1) =>
 				{
 					response=data1.data;
 					if(response!=null)
 					{
 						data=response;
-						console.log(data);
-						console.log(data['routes'][0]['legs']);
+						
 						stcor=data['routes'][0]['legs'][0]['start_location'];//Source co-ordinate
 
 						var lines=[];
@@ -201,12 +200,10 @@ app.post('/GetRoute', (req, res) =>
 								if(sx_tranformed<dx_tranformed)
 								{
 									x=(Math.random()*(dx_tranformed*mul-sx_tranformed*mul)+sx_tranformed*mul)/mul;
-									console.log("Random point "+x);
 								}
 								else
 								{
 									x=(Math.random()*(sx_tranformed*mul-dx_tranformed*mul)+dx_tranformed*mul)/mul;
-									console.log("Random point "+x);
 								}
 
 								y_upper=b*(Math.sqrt(1-((x*x)/(a*a))));
@@ -219,15 +216,11 @@ app.post('/GetRoute', (req, res) =>
 							
 								waypts_lng.push(x_tranform);
 								waypts_lat.push(y_tranform);
-								console.log("Inside Loop " + waypts_lat);
-								console.log("Inside Loop " +waypts_lng);
 							}
 
 							sd+=(29+(no*20));
 							url=base_url;
 							url+=paramString;
-							console.log(waypts_lat);
-							console.log(waypts_lng);
 							url=url+"&waypoints=optimize:true%7C"+waypts_lat[0]+"%2C"+waypts_lng[0]+"%7C"+waypts_lat[1]+"%2C"+waypts_lng[1]+"%7C"+waypts_lat[2]+"%2C"+waypts_lng[2];
 							url=url+"&key="+api_key;
 							await axios.get(url).then(async (data1) =>
@@ -283,7 +276,6 @@ app.post('/GetRoute', (req, res) =>
 		func().then((response) =>
 		{
 			res.send(response);
-			console.log("hi");
 			allines=[];
 		});
 	});

@@ -148,7 +148,7 @@ def main(argv):
         output["images"].append({"path":path_name, "cluster_number":str(y[i]), "coordinates": {"latitude" : str(latlng[0]) , "longitude" : str(latlng[1])}})
         
     for i in range(len(center)):
-        output["areas"].append({"location":location[i],"coordinates":str(center[i])})
+        output["areas"].append({"location":location[i],"coordinates":{"latitude": str(center[i][0]), "longitude": str(center[i][1])}})
     #_____________________________________________
     from functools import reduce
     def encircle(X,Y):
@@ -194,17 +194,10 @@ def main(argv):
     for i in range(max(db.labels_)):
         val=encircle(xcor[i], ycor[i])
         if(len(val)>0):
-            poly.append(np.concatenate(val).ravel())
+            val.append(val[0])
+            poly.append(val)
 
-    region=""
-    for i in range(len(poly)):
-        for j in range(len(poly[i])):
-            region=region+str(poly[i][j])+','
-        region=region+str(poly[i][len(poly[i])-2])+","+str(poly[i][len(poly[i])-1])+','+str(poly[i][0])+","+str(poly[i][1])
-        region=region+'/'
-    region=region[:-1]
-
-    output["border"].append(region);
+    output["border"].append(poly);
     json_data = json.dumps(output)
     print(json_data);
     #________________________________#

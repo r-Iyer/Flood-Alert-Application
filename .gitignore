@@ -9,3 +9,14 @@ backup_mega_project
 backup_mega_project.rar
 Server/code/GeoLocation.ipynb
 Server/code/Predict.ipynb
+Server/files/*
+Web Scraping/
+Simulation/.ipynb_checkpoints/assign_latlong_for_simulation-checkpoint.ipynb
+Simulation/chennai flood_new_method/
+Simulation/mumbai flood 4/
+Simulation/mumbai flood_new_method/
+Simulation/test_mumbai_1/
+Simulation/test_mumbai_2/
+Codes/.ipynb_checkpoints/*
+Server/code/.ipynb_checkpoints/*
+Simulation/.ipynb_checkpoints/*

@@ -28,6 +28,9 @@ def main(argv):
     from sklearn.cluster import KMeans, DBSCAN
     from scipy.cluster.vq import kmeans2, whiten
     key="AIzaSyAu6PIjwW-IL4vznXvmi5KnAYlvBQWZSoA"
+    MAX_CLUSTERS = 1000 #Maximum no. of clusters would be 20
+    #Minimum threshold (no. of images) for a cluster to be shown in the map
+    MIN_NO_OF_IMAGES = 10
     class ImageMetaData(object):
         exif_data = None
         image = None
@@ -85,70 +88,7 @@ def main(argv):
                     lat = self.convert_to_degress(gps_latitude)
                     lng = self.convert_to_degress(gps_longitude)
             return lat, lng
-    def load_images_from_folder(folder):
-        images = []
-        for filename in os.listdir(folder):
-            images.append(filename)
-        return images
-    loc=argv[0].strip('"');
-    loc=loc.lower()
-    filename="files/"+loc+"/";
-    images1=load_images_from_folder(filename)
-    img=np.array(images1)
-
-    #___Get Coordinates of each images in the folder___#
-    coordinates=[]
-    for i in range(img.shape[0]):
-        coordinates.append([])
-    for i in range(img.shape[0]):
-        path_name = filename+img[i]
-        meta_data =  ImageMetaData(path_name)
-        latlng =meta_data.get_lat_lng()
-        coordinates[i].append(latlng[0])
-        coordinates[i].append(latlng[1])
-    coordinates=np.array(coordinates)
-    #________________________________________________#
-
-
-    # db scan to know no. of clusters folled by kmeans to get the cluster centers
-    kms_per_radian = 6371.0088
-    epsilon = 1.5 / kms_per_radian
-    db = DBSCAN(eps=epsilon, min_samples=1, algorithm='ball_tree', \
-                metric='haversine').fit(np.radians(coordinates))
-    #plt.scatter(coordinates[:,1], coordinates[:,0], c=y);
-    #plt.show()
-    y = db.labels_
-
-    for i in range(len(y)): # to prevent first cluser label = -1
-        y[i]=y[i]+1;
-
-    kmeans = KMeans(n_clusters=max(db.labels_)).fit((np.radians(coordinates))) 
-    y=kmeans.labels_
-
-    center=kmeans.cluster_centers_
-    center=np.rad2deg(center)
-
-    #_______GET description of location that is the flood center_____#"
-    location=[]
-    for i in range(len(center)):
-        response=requests.get("https://maps.googleapis.com/maps/api/geocode/json?latlng="+str(center[i][0])+","+str(center[i][1])+"&key="+key)
-        data = json.loads(response.text)
-        if(data['results'][0]['formatted_address'].split(",")[-3].lower().strip(' ')==loc): # loc = folder name = city name
-            location.append(data['results'][0]['formatted_address'].split(",")[-4])
-        else:
-            location.append(data['results'][0]['formatted_address'].split(",")[-3])
-    #______________________________________________________________#
-
-    output = {"images":[],"areas":[],"border":[]};
-    
-    for i in range(img.shape[0]):
-        path_name = filename+img[i]
-        meta_data =  ImageMetaData(path_name)
-        latlng =meta_data.get_lat_lng()
-        output["images"].append({"path":path_name, "cluster_number":str(y[i]), "coordinates": {"latitude" : str(latlng[0]) , "longitude" : str(latlng[1])}})
-        
-    for i in range(len(center)):
-        output["areas"].append({"location":location[i],"coordinates":{"latitude": str(center[i][0]), "longitude": str(center[i][1])}})
+            
     #_____________________________________________
     from functools import reduce
     def encircle(X,Y):
@@ -179,19 +119,111 @@ def main(argv):
         u = reduce(_keep_left, reversed(points), [])
         return l.extend(u[i] for i in range(1, len(u) - 1)) or l
         #____________________________________________________
+        
+    def load_images_from_folder(folder):
+        images = []
+        for filename in os.listdir(folder):
+            images.append(filename)
+        return images
+        
+    loc=argv[0].strip('"');
+    loc=loc.lower()
+    filename="files/"+loc+"/";
+    images1=load_images_from_folder(filename)
+    img=np.array(images1)
+    
+    def getAcceptableClusters(cluster_data):
+        temp = {}
+        counter=-1
+        acceptable_clusters=[]
+        for i in range(len(cluster_labels)):
+                if(cluster_labels.tolist().count(cluster_labels[i])<MIN_NO_OF_IMAGES):
+                    continue;
+                acceptable_clusters.append(cluster_labels[i])
+                
+        for i in range(len(acceptable_clusters)):
+            if(acceptable_clusters[i] not in temp):
+                counter=counter+1
+                temp[acceptable_clusters[i]]=counter
+        for i in range(len(acceptable_clusters)):
+            acceptable_clusters[i]=temp[acceptable_clusters[i]]
+        return acceptable_clusters
+        
+
+    #___Get Coordinates of each images in the folder___#
+    coordinates=[]
+    for i in range(img.shape[0]):
+        coordinates.append([])
+    for i in range(img.shape[0]):
+        path_name = filename+img[i]
+        meta_data =  ImageMetaData(path_name)
+        latlng =meta_data.get_lat_lng()
+        coordinates[i].append(latlng[0])
+        coordinates[i].append(latlng[1])
+    coordinates=np.array(coordinates)
+    #________________________________________________#
+
+    
+    # db scan to know no. of clusters folled by kmeans to get the cluster centers
+    kms_per_radian = 6371.0088
+    epsilon = 1.5 / kms_per_radian
+    db = DBSCAN(eps=epsilon, min_samples=1, algorithm='ball_tree', \
+                metric='haversine').fit(np.radians(coordinates))
+    #plt.scatter(coordinates[:,1], coordinates[:,0], c=y);
+    #plt.show()
+    y = db.labels_
+
+    for i in range(len(y)): # to prevent first cluser label = -1
+        y[i]=y[i]+1;
+        
+    
+    kmeans = KMeans(n_clusters=min(max(db.labels_),MAX_CLUSTERS)).fit((np.radians(coordinates))) 
+    cluster_labels=kmeans.labels_
+    
+    #Accept only those clusters having cluster size greater than minimum threshold
+    acceptable_cluster=getAcceptableClusters(cluster_labels)
+    
+    center=kmeans.cluster_centers_
+    center=np.rad2deg(center)
+
+    #_______GET description of location that is the flood center_____#"
+    output = {"images":[],"areas":[],"border":[]};
+    
+    for i in range(len(center)):
+        if(cluster_labels.tolist().count(i)<MIN_NO_OF_IMAGES):
+            continue;
+        response=requests.get("https://maps.googleapis.com/maps/api/geocode/json?latlng="+str(center[i][0])+","+str(center[i][1])+"&key="+key)
+        data = json.loads(response.text)
+        if(len(data['results'][0]['formatted_address'].split(","))>3 and data['results'][0]['formatted_address'].split(",")[-3].lower().strip(' ')==loc): # loc = folder name = city name
+                output["areas"].append({"location":data['results'][0]['formatted_address'].split(",")[-4],"coordinates":{"latitude": str(center[i][0]), "longitude": str(center[i][1])}})
+        else:
+            output["areas"].append({"location":data['results'][0]['formatted_address'].split(",")[-3],"coordinates":{"latitude": str(center[i][0]), "longitude": str(center[i][1])}})
+    #______________________________________________________________#
+    
+    iterable=-1
+    for i in range(img.shape[0]):
+        if(cluster_labels.tolist().count(cluster_labels[i])<MIN_NO_OF_IMAGES):
+            continue;
+        iterable=iterable+1
+        path_name = filename+img[i]
+        meta_data =  ImageMetaData(path_name)
+        latlng =meta_data.get_lat_lng()
+        output["images"].append({"path":path_name, "cluster_number":str(acceptable_cluster[iterable]), "coordinates": {"latitude" : str(latlng[0]) , "longitude" : str(latlng[1])}})
 
     xcor=[]
     ycor=[]
-    for i in range(max(db.labels_)):
+    for i in range(max(kmeans.labels_)):
         xcor.append([])
         ycor.append([])
-    for i in range(max(db.labels_)):
+    for i in range(max(kmeans.labels_)):
         for j in range(len(coordinates)):
-            if y[j]==i:
+            if cluster_labels[j]==i:
                 xcor[i].append(coordinates[j][0])
                 ycor[i].append(coordinates[j][1])
     poly=[]
-    for i in range(max(db.labels_)):
+    for i in range(max(kmeans.labels_)):
+        if(cluster_labels.tolist().count(i)<MIN_NO_OF_IMAGES):
+            continue;
         val=encircle(xcor[i], ycor[i])
         if(len(val)>0):
             val.append(val[0])

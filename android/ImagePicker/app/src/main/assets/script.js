@@ -1,15 +1,12 @@
 var list_of_points=[];
-
 function placeMarker() 
-{
-	document.getElementById("route-selection").className="show";
-	document.getElementById("cost").innerHTML="";
-	
+{	
 	var url=document.getElementById("url").value;
 	url=url+"/map";
 	console.log("URL called : " + url);
 	
-	var urlarray=[],cluster=[],parseResponse="",responseData="",color= ['blue', 'yellow', 'green', 'red','orange', 'aqua', 'fuchsia','lime', 'maroon', 'navy', 'olive', 'purple','silver', 'teal', 'white','black'];
+	var urlarray=[],cluster=[],parseResponse="",responseData="";
+	var color = ["#FF0000","#030894","#006312","#34e2eb","#00FF00","#FFD700","#FF69B4","#FFA07A","#800000","#808000","#CD853F","#FFFFFF","#00FF7F","#C0C0C0","#F4A460","#800080","#F0E68C","#B22222","#008080","#8A2BE2"]; //Red,Blue,Green,Orange,Lime,Gold,Pink,LightSalmon,Maroon,Olive,Peru,White,SpringGreen,Silver,Sandy Brown,Purple,Khaki,FireBrick,Teal,BlueViolet (Total 20)
 	
 	//Sending Http Post
 	var reqBody = JSON.stringify(document.getElementById("urlOfFile").value);
@@ -49,33 +46,48 @@ function placeMarker()
 				});
 
 				google.maps.event.addListener(markers, "click", (function (markers,i) 
-				{
-					return function() 
 					{
-						console.log(markers.title);
-						infowindow.setContent(markers.title);
-						infowindow.open(map,markers);
-					}
-				})(markers,i));
+						return function() 
+						{
+							console.log(markers.title);
+							infowindow.setContent(markers.title);
+							infowindow.open(map,markers);
+						}
+					})(markers,i)
+				);
 
 			}
 			
-			document.getElementById("route-selection").addEventListener("click", function(){
-				generateRoutes(parseResponse, map);
-				},{once:true} //So that event listener does not get added again
-			); 
-			
 			//Calling the function to select coordinates for route
-			selecting_coordinates_for_route(map);
+			var markers = selecting_coordinates_for_route(map);
+			
+			activateButtons();
+			setEventListenerRouteSelection(parseResponse, map, markers);
 		}
 	}
 
 }
 
-function heatmap() 
+function activateButtons()
 {
+	list_of_points=[];
+	
 	document.getElementById("route-selection").className="show";
+	document.getElementById("clear-selection").className="hide";
 	document.getElementById("cost").innerHTML="";
+}
+
+function clearPolyLines(allPolyLines, markers)
+{
+	activateButtons();
+	for(var i=0;i<allPolyLines.length;i++)
+		allPolyLines[i].setMap(null);
+	for(var i=0;i<markers.length;i++)
+		markers[i].setMap(null);
+}
+
+function heatmap() 
+{	
 	
 	var url=document.getElementById("url").value;
 	url=url+"/map";
@@ -101,7 +113,7 @@ function heatmap()
 			display_centroid_locations(parseResponse);
 
 			//Drawing Heatmap
-			var heatmapData=[]
+			var heatmapData=[];
 			for(i=0;i<parseResponse["images"].length-1;i++)
 				heatmapData[i]=new google.maps.LatLng(parseFloat(parseResponse["images"][i]["coordinates"]["latitude"]),parseFloat(parseResponse["images"][i]["coordinates"]["longitude"]));
 
@@ -128,51 +140,55 @@ function heatmap()
 				flightPath.setMap(map);
 			}
 			
-			document.getElementById("route-selection").addEventListener("click", function(){
-				generateRoutes(parseResponse, map);
-				},{once:true} //So that event listener does not get added again
-			); 
-			
+			var markers = selecting_coordinates_for_route(map);
 			//Calling the function to select coordinates for route
-			selecting_coordinates_for_route(map);
+			
+			activateButtons();
+			setEventListenerRouteSelection(parseResponse, map, markers);
 		}
 	}
 }
-
+function setEventListenerRouteSelection(parseResponse, map, markers)
+{
+	
+	document.getElementById("route-selection").replaceWith(document.getElementById("route-selection").cloneNode(true));
+	document.getElementById("route-selection").addEventListener("click", function(){
+		generateRoutes(parseResponse, map, markers);
+		}
+	);
+}
 function selecting_coordinates_for_route(map)
 {
-	list_of_points=[];
-	
+	var markers=[];
 	//Adding Code for selecting coordinates for route
 	var route=[],no_points=0;
 	var latlngbounds = new google.maps.LatLngBounds();
 	google.maps.event.addListener(map, 'click', function (e) {
-		list_of_points.push({"latitude":e.latLng.lat(),"longitude":e.latLng.lng()});
-	});
-	google.maps.event.addListener(map, 'click', function(event) {
-		placeMarker(event.latLng);
-	});
-
-	function placeMarker(location) {
-		var marker = new google.maps.Marker({
-			animation: google.maps.Animation.DROP,
-			position: location, 
-			map: map
-		});
-		
-		no_points++;
-		route[no_points]=location;
-		
-		if(no_points!=1){
-			var coordinates = [
-				route[no_points-1],
-				route[no_points]
-			];
-		}
-	}
+			list_of_points.push({"latitude":e.latLng.lat(),"longitude":e.latLng.lng()});
+			var location = e.latLng;
+			var marker = new google.maps.Marker({
+				animation: google.maps.Animation.DROP,
+				position: location, 
+				map: map
+			});
+			
+			no_points++;
+			route[no_points]=location;
+			
+			if(no_points!=1){
+				var coordinates = [
+					route[no_points-1],
+					route[no_points]
+				];
+			}
+			marker.setMap(map);
+			markers.push(marker);
+		},{once:true} //So that event listener does not get added again
+	);
+	return markers;
 }
 
-function generateRoutes(initial_data, map)
+function generateRoutes(initial_data, map, markers)
 {
 	console.log("Origin and Destination");
 	console.log(list_of_points);
@@ -193,12 +209,12 @@ function generateRoutes(initial_data, map)
 		{
 			responseData=ajax.responseText;
 			all_routes = JSON.parse(responseData);
-			drawRoutes(initial_data, all_routes,map);
+			drawRoutes(initial_data, all_routes, map, markers);
 		}
 	}
 }
 
-function drawRoutes(initial_data, thelines,map)
+function drawRoutes(initial_data, thelines, map, markers)
 {
 //__________________________________Initialisation_____________________
 	var boundaryData=initial_data["border"][0];
@@ -230,7 +246,7 @@ function drawRoutes(initial_data, thelines,map)
 	console.log(flightPlanCordfn);
 
 //Draw All the routes
-	visualise_routes(map, flightPlanCordfn);
+	var allPolyLines = visualise_routes(map, flightPlanCordfn);
 
 //Distance of a route through a cluster
 	var response = calculate_distances(flightPlanCordfn,boundaryData);
@@ -251,8 +267,15 @@ function drawRoutes(initial_data, thelines,map)
 	
 //Displaying Results
 	var color=["Red","Blue","Black","Green","Orange","Violet"];
+	
 	document.getElementById("route-selection").className="hide";
 	document.getElementById("cost").className="show";
+	document.getElementById("clear-selection").className="show";
+	
+	document.getElementById("clear-selection").addEventListener("click", function(){
+		clearPolyLines(allPolyLines, markers);
+		},{once:true} //So that event listener does not get added again
+	); 
 	for(var i=0;i<n;i++)
 	{
 	  document.getElementById("cost").innerHTML+=("cost of route "+color[i]+": "+cost[i]+"<br>");
@@ -269,7 +292,6 @@ function calculate_cost(dist, pointsInEachCluster)
 	var noCluster = pointsInEachCluster.length;
 	var n = dist.length;
 	var cost=new Array(n);
-
 	for(var i=0;i<n;i++)//For each route
 	{
 		cost[i]=0;
@@ -280,7 +302,8 @@ function calculate_cost(dist, pointsInEachCluster)
 		{
 			if(dist[i][k]!=0)
 			{
-				cost[i]+=(dist[i][k]*pointsInEachCluster[k]);
+				//cost[i]+=(dist[i][k]*pointsInEachCluster[k]);
+				cost[i]+=dist[i][k];
 				eachRouteTotalDist+=dist[i][k];
 				eachRouteTotalClusPts+=pointsInEachCluster[k];
 			}
@@ -344,9 +367,9 @@ function calculate_distances(flightPlanCordfn,boundaryData)
 		{
 			if(all_route_intersections_with_clusters[i][j].length==0)
 				dist[i][j] = 0;
-			else if(all_route_intersections_with_clusters[i][j].length==2)
+			else if(all_route_intersections_with_clusters[i][j].length>=2) //In case of more than 2 points of intersection, we ate taking the distance between the initial and final point only.
 			{
-				dist[i][j] = calculate_distance_between_two_points_in_a_route(flightPlanCordfn[i],[all_route_intersections_with_clusters[i][j][0][0], all_route_intersections_with_clusters[i][j][0][1]], [all_route_intersections_with_clusters[i][j][1][0], all_route_intersections_with_clusters[i][j][1][1]]);
+				dist[i][j] = calculate_distance_between_two_points_in_a_route(flightPlanCordfn[i],[all_route_intersections_with_clusters[i][j][0][0], all_route_intersections_with_clusters[i][j][0][1]], [all_route_intersections_with_clusters[i][j][all_route_intersections_with_clusters[i][j].length-1][0], all_route_intersections_with_clusters[i][j][all_route_intersections_with_clusters[i][j].length-1][1]]);
 			}
 		}
 		
@@ -442,21 +465,24 @@ function loop_removing(thelines)
 
 function visualise_routes(map, flightPlanCordfn)
 {
-	var flightPath = [];
+	var flightPath = [],allPolyLines=[];
 	var clr=["#FF0000","#030894","#000000","#006312","#34e2eb","#9914ff"];//Red,Blue,Black,Green,Orange,Violet
 	n=flightPlanCordfn.length;
 	for(var i=0;i<n;i++)
 	{
 	//Drawing the routes on the map
-		flightPath.push(new google.maps.Polyline({
+		var flightPath = new google.maps.Polyline({
 		map:map,
 		path: flightPlanCordfn[i],
 		geodesic: true,
 		strokeColor: clr[i],
 		strokeOpacity: 1,
 		strokeWeight: 5
-	  }));
+	  });
+	  flightPath.setMap(map);
+	  allPolyLines.push(flightPath);
 	}
+	return allPolyLines;
 }
 
 function display_centroid_locations(parseResponse)

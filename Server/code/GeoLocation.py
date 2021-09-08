@@ -30,7 +30,7 @@ def main(argv):
     key="AIzaSyAu6PIjwW-IL4vznXvmi5KnAYlvBQWZSoA"
     MAX_CLUSTERS = 1000 #Maximum no. of clusters would be 20
     #Minimum threshold (no. of images) for a cluster to be shown in the map
-    MIN_NO_OF_IMAGES = 10
+    MIN_NO_OF_IMAGES = 10       
     class ImageMetaData(object):
         exif_data = None
         image = None
@@ -212,16 +212,16 @@ def main(argv):
 
     xcor=[]
     ycor=[]
-    for i in range(max(kmeans.labels_)):
+    for i in range(max(kmeans.labels_)+1):
         xcor.append([])
         ycor.append([])
-    for i in range(max(kmeans.labels_)):
+    for i in range(max(kmeans.labels_)+1):
         for j in range(len(coordinates)):
             if cluster_labels[j]==i:
                 xcor[i].append(coordinates[j][0])
                 ycor[i].append(coordinates[j][1])
     poly=[]
-    for i in range(max(kmeans.labels_)):
+    for i in range(max(kmeans.labels_)+1):
         if(cluster_labels.tolist().count(i)<MIN_NO_OF_IMAGES):
             continue;
         val=encircle(xcor[i], ycor[i])

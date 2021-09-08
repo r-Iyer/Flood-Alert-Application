@@ -219,8 +219,6 @@ function drawRoutes(initial_data, thelines, map, markers)
 //__________________________________Initialisation_____________________
 	var boundaryData=initial_data["border"][0];
 	var noCluster= boundaryData.length;
-	var src_lng=list_of_points[0]['longitude'], src_lat=list_of_points[0]['latitude'];//Co-ordinates of the source
-	var dest_lng=list_of_points[1]['longitude'], dest_lat=list_of_points[1]['latitude'];//Co-ordinates of the destination
 	var flightPlanCordfn=[];//It is an array of array. It Stores the co-ordinates of all the routes.
 	
 	var centroidsData = [], clusterData = [], pointsClusterWise=new Array(noCluster), pointsInEachCluster=new Array(noCluster);
@@ -270,18 +268,26 @@ function drawRoutes(initial_data, thelines, map, markers)
 	
 	document.getElementById("route-selection").className="hide";
 	document.getElementById("cost").className="show";
+	document.getElementById("coordinates").className="show";
 	document.getElementById("clear-selection").className="show";
 	
 	document.getElementById("clear-selection").addEventListener("click", function(){
 		clearPolyLines(allPolyLines, markers);
 		},{once:true} //So that event listener does not get added again
 	); 
+	
+	document.getElementById("cost").innerHTML+=("Origin : "+list_of_points[0]['latitude'] + " , " + list_of_points[0]['longitude']+" ; Destination : "+list_of_points[list_of_points.length-1]['latitude'] + " , " + list_of_points[list_of_points.length-1]['longitude']);
+	var table = "<table  border=1 width=100%>";
+	
+	table+="<tr><th>Route</th><th font-size:160%>Distance</th><th font-size:160%>Cost</th></tr>";
 	for(var i=0;i<n;i++)
 	{
-	  document.getElementById("cost").innerHTML+=("cost of route "+color[i]+": "+cost[i]+"<br>");
-	  document.getElementById("cost").innerHTML+=("distance of route "+color[i]+": "+(distances_of_path[i])+" km<br>");
+		table+="<tr>";		
+		table+="<td style=color:"+color[i]+">"+color[i]+"</td>";		table+="<td>"+(distances_of_path[i])+"</td>";		table+="<td>"+cost[i]+"</td>";
+		table+="</tr>";
 	}
-
+	table+="</table>";
+	document.getElementById("cost").innerHTML+=table;
 }
 
 function calculate_cost(dist, pointsInEachCluster)

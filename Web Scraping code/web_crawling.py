@@ -12,7 +12,6 @@ import os
 import urllib2
 import argparse
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
 import sys
 import time
 def is_not_already_added(image_urls,present_url): # by rohit
@@ -25,7 +24,9 @@ _,searchterm,totalcount = sys.argv # will also be the name of the folder
 totalcount=int(totalcount)
 url = "https://www.google.co.in/search?q="+searchterm+"&source=lnms&tbm=isch"
 # NEED TO DOWNLOAD CHROMEDRIVER, insert path to chromedriver inside parentheses in following line
-browser = webdriver.Chrome("chromedriver.exe")
+options = webdriver.ChromeOptions()
+options.binary_location=r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+browser = webdriver.Chrome(chrome_options=options,executable_path=r"C:\Users\Rohit\Documents\Flood-Alert-Application\Web Scraping code\chromedriver.exe")
 browser.get(url)
 header={'User-Agent':"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.134 Safari/537.36"}
 counter = 0

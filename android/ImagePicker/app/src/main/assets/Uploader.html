@@ -32,7 +32,12 @@
 		</div>
 		<br><br>
 	    <a class="nav-item">
-	        <input type="urlOfFile" name ="urlOfFile" id="urlOfFile" style="width:70%;"><br><br><br>
+	        <input type="urlOfFile" name ="urlOfFile" id="urlOfFile" style="width:70%;" list="datalist" autocomplete="off"><br><br><br>
+			<datalist id="datalist">
+				<option value="Mumbai"></option>
+				<option value="Chennai"></option>
+				<option value="Kolkata"></option>
+			</datalist>
 	       	<a class="nav-link js-scroll-trigger" style="font-size:15px" href="#" onclick="placeMarker()">See Map </a>
 	       	&nbsp;&nbsp;&nbsp;
 	        <a class="nav-link js-scroll-trigger" style="font-size:15px" href="#" onclick="heatmap()">See Heatmap</a>

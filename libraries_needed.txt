@@ -1,0 +1,17 @@
+Libraries needed for prediction:
+
+pandas
+opencv-python
+matplotlib
+Image
+scikit-learn
+tensorflow
+nightly-gpu
+
+Download CUDA.
+
+Libraries needed for Web crawling:
+
+requests
+webdrivermanager
+selenium

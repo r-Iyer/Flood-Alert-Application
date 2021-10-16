@@ -607,3 +607,10 @@ function pinSymbol(color)
 		scale: 0.4
 	};
 }
+function showSuggestions()
+{
+	var suggestions = ["Mumbai","Chennai"];
+	for(var i=0;i<suggestions.length;i++)
+		document.getElementById("url").innerHTML+=suggestions[i];
+		
+}

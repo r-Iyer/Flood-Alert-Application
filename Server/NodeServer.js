@@ -4,7 +4,7 @@ var path = require('path');
 const app = express();
 const cors=require('cors');
 var fs =require('fs');
-var api_key="AIzaSyAQCOr2z_gBhaKfuniDbEJI9DNleVDFbdk"
+var api_key="YOUR_API_KEY"
 var bing_api_key="AtoecFuQmBsA4-YGrKu_-R4ePtIdK92ljEwh4lwy8mNaIVicq24DTGxf3uH4p5D9";
 app.use(express.static(__dirname + 'public'));
 app.use(express.static('public'))

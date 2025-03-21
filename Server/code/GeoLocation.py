@@ -27,7 +27,7 @@ def main(argv):
     import matplotlib.pyplot as plt
     from sklearn.cluster import KMeans, DBSCAN
     from scipy.cluster.vq import kmeans2, whiten
-    key="AIzaSyAu6PIjwW-IL4vznXvmi5KnAYlvBQWZSoA"
+    key="YOUR_API_KEY"
     MAX_CLUSTERS = 1000 #Maximum no. of clusters would be 20
     #Minimum threshold (no. of images) for a cluster to be shown in the map
     MIN_NO_OF_IMAGES = 10       

@@ -5,7 +5,7 @@
   "main": "Uploader.html",
   "dependencies": {
     "@turf/turf": "^6.5.0",
-    "axios": "^0.21.1",
+    "axios": "^0.30.2",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "formidable": "^1.2.1",

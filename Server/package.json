@@ -17,7 +17,7 @@
   "devDependencies": {
     "grunt-contrib-watch": "^1.1.0",
     "grunt-run": "^0.8.1",
-    "grunt-sass": "^2.1.0",
+    "grunt-sass": "^4.0.1",
     "grunt-shell": "^3.0.1",
     "jit-grunt": "^0.10.0",
     "load-grunt-tasks": "^5.1.0",
